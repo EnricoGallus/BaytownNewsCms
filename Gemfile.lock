@@ -271,6 +271,7 @@ DEPENDENCIES
   capybara
   dartsass-sprockets
   debug
+  i18n
   importmap-rails
   jbuilder
   jquery-rails

@@ -27,9 +27,9 @@
 #       "yes": yup
 #       enabled: "ON"
 
-en:
+ja:
   navbar:
-    language: Language
+    language: 言葉
   languages:
-    en: English
-    ja: Japanese
+    en: 英語
+    ja: 日本語
