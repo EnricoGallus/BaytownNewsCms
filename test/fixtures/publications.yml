@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  distribution_date: 2024-01-27
+  title: MyString
+  subtitle: MyString
+  headers: MyText
+
+two:
+  number: MyString
+  distribution_date: 2024-01-27
+  title: MyString
+  subtitle: MyString
+  headers: MyText
