@@ -31,6 +31,9 @@ en:
   application:
     title: Makuhari Baytown News
   navbar:
+    menu:
+      news: News
+      archive: Archive
     language: Language
   languages:
     en: English

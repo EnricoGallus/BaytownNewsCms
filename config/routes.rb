@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   scope "/:locale" do
+    get '/news', to: 'news#index', as: 'news'
+    get '/archive', to: 'archive#index', as: 'archive'
   end
 
   root 'home#index'

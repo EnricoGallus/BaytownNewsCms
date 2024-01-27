@@ -25,6 +25,9 @@ gem 'jquery-rails'
 
 gem 'i18n'
 
+gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
+
 gem 'rails_admin', '~> 3.0'
 gem 'rails_admin-i18n'
 

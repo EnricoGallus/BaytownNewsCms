@@ -31,6 +31,9 @@ ja:
   application:
     title: まくはりベイタウンニュース
   navbar:
+    menu:
+      news: ニュース
+      archive: アーカイブ
     language: 言葉
   languages:
     en: 英語

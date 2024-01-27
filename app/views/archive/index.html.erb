@@ -1,0 +1,10 @@
+<div class="row">
+  <% @publications.each do |publication| %>
+    <div class="col-md-4">
+      <h3><%= publication.title %></h3>
+      <p><%= publication.distribution_date %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= paginate @publications, theme: 'bootstrap-5' %>
