@@ -1,6 +1,9 @@
-<% flash.each do |type, message| %>
-  <div class="alert alert-<%= type %> alert-dismissible fade show" role="alert">
-    <%= message %>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+<% unless flash.empty? %>
+  <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function () {
+        <% flash.each do |msg_type, msg| %>
+          toastr['<%= msg_type.gsub(/alert|notice/, 'alert' => 'error', 'notice' => 'info') %>']('<%= msg %>');
+      <% end %>
+      });
+  </script>
 <% end %>

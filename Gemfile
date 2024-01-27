@@ -23,6 +23,8 @@ gem "bootstrap_form", "~> 5.3.2"
 
 gem 'jquery-rails'
 
+gem 'toastr-rails'
+
 gem 'i18n'
 
 gem 'kaminari'
