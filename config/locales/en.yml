@@ -38,3 +38,30 @@ en:
   languages:
     en: English
     ja: Japanese
+
+  activerecord:
+    models:
+      publication: "Publication"
+    attributes:
+      publication:
+        number: "Number"
+        distribution_date: "Distribution Date"
+        title: "Title"
+        subtitle: "Subtitle"
+        pdf_file: "PDF File"
+
+    errors:
+      models:
+        publication:
+          attributes:
+            number:
+              blank: "can't be blank"
+            distribution_date:
+              blank: "can't be blank"
+            title:
+              blank: "can't be blank"
+            subtitle:
+              blank: "can't be blank"
+            pdf_file:
+              blank: "can't be blank"
+              content_type: "must be a PDF file"

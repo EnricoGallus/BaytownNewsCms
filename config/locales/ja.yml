@@ -38,3 +38,34 @@ ja:
   languages:
     en: 英語
     ja: 日本語
+
+  date:
+    month_names:
+      [ ~, １月, ２月, ３月, ４月, ５月, ６月, ７月, ８月, ９月, １０月, １１月, １２月 ]
+
+  activerecord:
+    models:
+      publication: "出版物"
+    attributes:
+      publication:
+        number: "Number"
+        distribution_date: "Distribution Date"
+        title: "Title"
+        subtitle: "Subtitle"
+        pdf_file: "PDF File"
+
+    errors:
+      models:
+        publication:
+          attributes:
+            number:
+              blank: "can't be blank"
+            distribution_date:
+              blank: "can't be blank"
+            title:
+              blank: "can't be blank"
+            subtitle:
+              blank: "can't be blank"
+            pdf_file:
+              blank: "can't be blank"
+              content_type: "must be a PDF file"
