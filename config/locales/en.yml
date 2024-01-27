@@ -28,6 +28,8 @@
 #       enabled: "ON"
 
 en:
+  application:
+    title: Makuhari Baytown News
   navbar:
     language: Language
   languages:

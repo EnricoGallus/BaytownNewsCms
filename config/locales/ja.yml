@@ -28,6 +28,8 @@
 #       enabled: "ON"
 
 ja:
+  application:
+    title: まくはりベイタウンニュース
   navbar:
     language: 言葉
   languages:

@@ -7,7 +7,7 @@ gem "rails", "~> 7.1.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
-gem 'dartsass-sprockets'
+gem 'sassc-rails'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -19,9 +19,14 @@ gem "puma", ">= 5.0"
 gem "importmap-rails"
 
 gem 'bootstrap', '~> 5.3.2'
+gem "bootstrap_form", "~> 5.3.2"
+
 gem 'jquery-rails'
 
 gem 'i18n'
+
+gem 'rails_admin', '~> 3.0'
+gem 'rails_admin-i18n'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -39,7 +44,11 @@ gem "jbuilder"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
+
+gem "devise"
+gem 'devise-i18n'
+gem 'devise-bootstrap-form'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
