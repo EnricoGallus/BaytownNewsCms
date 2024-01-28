@@ -39,6 +39,10 @@ en:
     en: English
     ja: Japanese
 
+  publication:
+    group_header: "%{year} Makuhari Baytown News from No. %{number}"
+    download: "Download"
+
   activerecord:
     models:
       publication: "Publication"

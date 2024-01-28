@@ -1,10 +1,37 @@
-<div class="row">
-  <% @publications.each do |publication| %>
-    <div class="col-md-4">
-      <h3><%= publication.title %></h3>
-      <p><%= publication.distribution_date %></p>
-    </div>
-  <% end %>
-</div>
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag 'archive_index' %>
+<% end %>
 
-<%= paginate @publications, theme: 'bootstrap-5' %>
+<% @publications.group_by { |publication| publication.distribution_date.year }.each do |year, publications| %>
+  <div class="row">
+    <div class="row">
+      <% min_publication = publications.min_by { |publication| publication.number } %>
+      <p class="publication_group_header"><%=t('publication.group_header', year: year, number: min_publication.number) %></p>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% publications.each do |publication| %>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= publication.title %></h5>
+              <p class="card-text"><%= publication.subtitle %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <% publication.publication_headers.each do |header| %>
+                <li class="list-group-item"><%= header.content %></li>
+              <% end %>
+            </ul>
+            <div class="card-footer text-body-secondary">
+              <%= link_to t('publication.download'), rails_blob_path(publication.pdf_file, disposition: 'attachment') %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+<% end %>
+<div class="row pt-5">
+  <div class="col">
+    <%= paginate @publications, theme: 'bootstrap-5' %>
+  </div>
+</div>
