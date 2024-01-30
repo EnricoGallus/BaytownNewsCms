@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+if User.count.zero?
+  User.create!(
+    email: 'enrico.gallus@gmail.com',
+    password: 'superadmin_password',
+  )
+  puts 'Superadmin user created successfully.'
+else
+  puts 'Users already exist in the database.'
+end

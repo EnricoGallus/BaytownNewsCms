@@ -3,3 +3,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require toastr
+import "trix"
+import "@rails/actiontext"
