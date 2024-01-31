@@ -28,7 +28,7 @@ jobs:
           docker buildx inspect --bootstrap
           
           docker buildx build \
-            --file dockerfile.production \
+            --file Dockerfile.production \
             --tag $ECR_REGISTRY/$ECR_REPOSITORY:latest \
             --tag $ECR_REGISTRY/$ECR_REPOSITORY:$GITHUB_SHA \
             .
