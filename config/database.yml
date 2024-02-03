@@ -82,5 +82,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: baytown_news_cms_production
+#  <<: *default
+#  database: baytown_news_cms_production
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000

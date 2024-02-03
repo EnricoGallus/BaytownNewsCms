@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
-  config.asset_source = :sprockets
+  config.asset_source = :webpacker
+  config.asset_source = :webpack
   config.parent_controller = "Admin::BaseController"
 
   ### Popular gems integration

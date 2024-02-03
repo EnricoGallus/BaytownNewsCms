@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - webpack
 
 jobs:
   build-and-push:
