@@ -27,6 +27,7 @@ RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash - && \
 
 # Install Yarn
 RUN npm install -g yarn
+RUN yarn install
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
