@@ -27,7 +27,6 @@ RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash - && \
 
 # Install Yarn
 RUN npm install -g yarn
-RUN yarn install
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
@@ -37,6 +36,9 @@ RUN bundle install && \
 
 # Copy application code
 COPY . .
+
+# Install Packages
+RUN yarn install
 
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
